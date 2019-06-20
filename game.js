@@ -4,6 +4,8 @@ const gameTable = document.querySelector('.game__table tbody');
 const enterButton = document.querySelector('.game__enter');
 const win = document.querySelector('.game__win');
 
+win.style.display = "block";
+
 //-------Quit Button-------------//
 
 const quitButton = document.querySelector('.game__quit');

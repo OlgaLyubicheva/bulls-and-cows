@@ -4,17 +4,15 @@ const gameTable = document.querySelector('.game__table tbody');
 const enterButton = document.querySelector('.game__enter');
 const win = document.querySelector('.game__win');
 
-win.style.display = "block";
+// //-------Quit Button-------------//
 
-//-------Quit Button-------------//
-
-const quitButton = document.querySelector('.game__quit');
-quitButton.onclick = () => {
-  if (confirm('Do you want to quit?')) {
-    window.close();
-  }
-}
-//-------End Quit Button----------//
+// const quitButton = document.querySelector('.game__quit');
+// quitButton.onclick = () => {
+//   if (confirm('Do you want to quit?')) {
+//     window.top.close();
+//   }
+// }
+// //-------End Quit Button----------//
 
 //-------New Game Button----------//
 function randomFromZeroToN(n) {
@@ -116,3 +114,5 @@ function pressEnter(event) {
     enterButton.click();
   }
 }
+
+win.style.display = "block";

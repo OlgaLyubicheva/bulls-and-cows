@@ -1,0 +1,44 @@
+.game {
+  width: 300px;
+  padding: 8px;
+
+  &__new-game {
+    width: 75%;
+  }
+
+  &__quit {
+    width: 23%;
+  }
+
+  &__form {
+    margin: 20px 0;
+  }
+
+  &__your-number {
+    width: 50px;
+  }
+
+  &__table thead {
+    background-color: rgb(197, 197, 197);
+  }
+
+  &__table tbody {
+    background-color: rgb(230, 230, 230);
+  }
+
+  @for $i from 1 through 3 {
+    &__table tr :nth-child(#{$i}) {
+      width: 50px * $i;
+    }
+  }
+
+  &__win {
+    padding: 20px;
+    border-radius: 4px;
+    background-color: rgb(255, 227, 227);
+    box-shadow: 5px 5px 9px 0px rgb(187, 187, 187);
+    text-align: center;
+    transform: scale(0);
+    transition: transform 2s;
+  }
+}

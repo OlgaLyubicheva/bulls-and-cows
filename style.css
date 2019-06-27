@@ -1,0 +1,45 @@
+.game {
+  width: 300px;
+  padding: 8px;
+}
+.game__description {
+  padding: 20px 10px;
+  margin-bottom: 5px;
+  background-color: #c5c5c5;
+}
+.game__new-game {
+  width: 100%;
+}
+.game__form {
+  margin: 20px 0;
+}
+.game__your-number {
+  width: 50px;
+}
+.game__table thead {
+  background-color: #c5c5c5;
+}
+.game__table tbody {
+  background-color: #e6e6e6;
+}
+.game__table tr :nth-child(1) {
+  width: 50px;
+}
+.game__table tr :nth-child(2) {
+  width: 100px;
+}
+.game__table tr :nth-child(3) {
+  width: 150px;
+}
+.game__win {
+  display: none;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #ffe3e3;
+  box-shadow: 5px 5px 9px 0px #bbbbbb;
+  text-align: center;
+  transform: scale(0);
+  transition: transform 2s;
+}
+
+/*# sourceMappingURL=style.css.map */

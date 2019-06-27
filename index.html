@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Bulls&Cows</title>
+</head>
+<body>
+  <div class="game">
+    <div class="game__description">We hid a 4-digit number (the digits are all different). Try to guess it!</div>
+    <button class="game__new-game">New Game</button>
+    <!-- <button class="game__quit">Quit</button> -->
+    
+    <div class="game__form">
+      <label for="your-number">Enter your number:</label>
+      <input 
+        class = "game__your-number" 
+        type = "text" 
+        id = "your-number" 
+        maxlength = "4" 
+        placeholder="0123" 
+        autocomplete="off"
+        onkeyup="pressEnter(event)"
+        disabled
+      >
+      <button class="game__enter" disabled>Enter</button>
+    </div>
+
+    <table class="game__table">
+      <thead>
+        <tr>
+          <td></td>
+          <td>Guess</td>
+          <td>Result</td>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <div class="game__win">!! You win !!</div>
+  </div>
+
+  <script type="text/javascript" src="game.js"></script>
+</body>
+</html>

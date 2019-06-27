@@ -4,16 +4,6 @@ const gameTable = document.querySelector('.game__table tbody');
 const enterButton = document.querySelector('.game__enter');
 const win = document.querySelector('.game__win');
 
-// //-------Quit Button-------------//
-
-// const quitButton = document.querySelector('.game__quit');
-// quitButton.onclick = () => {
-//   if (confirm('Do you want to quit?')) {
-//     window.top.close();
-//   }
-// }
-// //-------End Quit Button----------//
-
 //-------New Game Button----------//
 function randomFromZeroToN(n) {
   return Math.floor(Math.random() * n);
@@ -41,9 +31,10 @@ const newGameButton = document.querySelector('.game__new-game');
 
 newGameButton.onclick = () => {
   hiddenNumber = newGame();
-  console.log(hiddenNumber);
 
   gameTable.innerHTML = '';
+
+  win.style.display = "block";
   win.style.transform = "scale(0)";
 
   document.querySelector('.game__your-number').disabled = false;
@@ -76,9 +67,9 @@ enterButton.onclick = () => {
   const yourNumber = document.querySelector('.game__your-number');
   const bullsAndCows = bullsOrCows(hiddenNumber, yourNumber.value);
   
-  if (!(/[0-9]{4}/.test(yourNumber.value))) {
+  if (!(/(\d)(?!\1)(\d)(?!\1|\2)(\d)(?!\1|\2|\3)\d/.test(yourNumber.value))) {
     yourNumber.value = '';
-    return alert('Enter a number');
+    return alert('Enter correct number');
   }
 
   // Add new row to guess table
@@ -114,5 +105,3 @@ function pressEnter(event) {
     enterButton.click();
   }
 }
-
-win.style.display = "block";

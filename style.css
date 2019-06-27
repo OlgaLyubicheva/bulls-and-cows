@@ -2,11 +2,13 @@
   width: 300px;
   padding: 8px;
 }
-.game__new-game {
-  width: 75%;
+.game__description {
+  padding: 20px 10px;
+  margin-bottom: 5px;
+  background-color: #c5c5c5;
 }
-.game__quit {
-  width: 23%;
+.game__new-game {
+  width: 100%;
 }
 .game__form {
   margin: 20px 0;
